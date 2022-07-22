@@ -203,6 +203,8 @@ public interface CommonConstants {
 
     String REMOTE_METADATA_STORAGE_TYPE = "remote";
 
+    String GENERIC_KEY = "generic";
+
     /**
      * The composite metadata storage type includes {@link #DEFAULT_METADATA_STORAGE_TYPE "local"} and
      * {@link #REMOTE_METADATA_STORAGE_TYPE "remote"}.
@@ -239,12 +241,25 @@ public interface CommonConstants {
     String DUBBO_IP_TO_BIND = "DUBBO_IP_TO_BIND";
 
     /**
+     * broadcast cluster.
+     */
+    String BROADCAST_CLUSTER = "broadcast";
+
+    /**
      * The property name for {@link NetworkInterface#getDisplayName() the name of network interface} that
      * the Dubbo application prefers
      *
      * @since 2.7.6
      */
     String DUBBO_PREFERRED_NETWORK_INTERFACE = "dubbo.network.interface.preferred";
+
+    /**
+     * The property name for {@link NetworkInterface#getDisplayName() the name of network interface} that
+     * the Dubbo application will be ignored
+     *
+     * @since 2.7.6
+     */
+    String DUBBO_NETWORK_IGNORED_INTERFACE = "dubbo.network.interface.ignored";
 
     @Deprecated
     String SHUTDOWN_WAIT_SECONDS_KEY = "dubbo.service.shutdown.wait.seconds";
@@ -298,6 +313,8 @@ public interface CommonConstants {
     String EXTRA_KEYS_KEY = "extra-keys";
 
     String GENERIC_SERIALIZATION_NATIVE_JAVA = "nativejava";
+
+    String GENERIC_SERIALIZATION_GSON = "gson";
 
     String GENERIC_SERIALIZATION_DEFAULT = "true";
 
@@ -372,6 +389,8 @@ public interface CommonConstants {
 
     String DEFAULT_VERSION = "0.0.0";
 
+    String CLASS_DESERIALIZE_OPEN_CHECK = "dubbo.security.serialize.openCheckClass";
+
     String CLASS_DESERIALIZE_BLOCK_ALL = "dubbo.security.serialize.blockAllClassExceptAllow";
 
     String CLASS_DESERIALIZE_ALLOWED_LIST = "dubbo.security.serialize.allowedClassList";
@@ -381,4 +400,21 @@ public interface CommonConstants {
     String ENABLE_NATIVE_JAVA_GENERIC_SERIALIZE = "dubbo.security.serialize.generic.native-java-enable";
 
     String SERIALIZE_BLOCKED_LIST_FILE_PATH = "security/serialize.blockedlist";
+
+
+    /**
+     *  Interface configuration item
+     * @since 2.7.10
+     */
+    String ON_CONNECT_KEY = "onconnect";
+
+    String ON_DISCONNECT_KEY = "ondisconnect";
+
+    String TOKEN = "token";
+
+    String DUBBO_MONITOR_ADDRESS = "dubbo.monitor.address";
+
+    String DISPATHER = "dispather";
+
+    String SERVICE_NAME_MAPPING_KEY = "service-name-mapping";
 }
